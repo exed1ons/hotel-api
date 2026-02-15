@@ -4,6 +4,6 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
 
-COPY --from=build /target/uni-tg-bot-0.0.1-SNAPSHOT.jar uni-tg-bot.jar
+COPY --from=build /target/websys-hotel-0.0.1-SNAPSHOT.jar websys-hotel.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","uni-tg-bot.jar"]
+ENTRYPOINT ["java","-jar","websys-hotel.jar"]
